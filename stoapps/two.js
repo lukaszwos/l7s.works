@@ -101,6 +101,7 @@ let wplataOkresowa = document.getElementById('wplataOkresowa')
 wplataOkresowa.addEventListener('input', function() {
 	console.log(wplataOkresowa.value);
 	PMT = parseInt(wplataOkresowa.value);
+	rysuj()
 })
 
 
