@@ -5,7 +5,7 @@ let macierz; //wektor wartości miesięc po miesiącu
 let range = parseInt(document.getElementById('miesiace').value); //liczba miesięcy
 let PMT = 100 || parseInt(document.getElementById('wplataOkresowa').value); //wpłata miesięczna
 let pZero = 2000 || parseInt(document.getElementById('wplata').value); //wpłata początkowa
-let ryzyko = 1.02; //stopa procentowa w formacie 1+x
+let ryzyko = 1.002; //stopa procentowa w formacie 1+x
 
 rysuj();
 
@@ -52,8 +52,11 @@ function rysuj() {
 			.attr('stroke', 'blue');
 
 		let yAxis = d3.axisRight(y);
+
+		let xAxis = d3.axisTop(x);
 		
 		svg.append('g').attr("transform","translate(0,0)").call(yAxis);
+		svg.append('g').attr("transform","translate(0,400)").call(xAxis);
 
 	console.log(macierz);
 
